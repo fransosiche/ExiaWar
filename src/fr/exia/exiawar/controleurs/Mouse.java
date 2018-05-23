@@ -14,19 +14,16 @@ public class Mouse extends Observable implements MouseListener, MouseMotionListe
 
 	}
 
-	
 	public void mouseEntered(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
-	
 	public void mouseExited(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
-	
 	public void mousePressed(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 
@@ -42,13 +39,11 @@ public class Mouse extends Observable implements MouseListener, MouseMotionListe
 		}
 	}
 
-	
 	public void mouseDragged(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
-	
 	public void mouseMoved(MouseEvent e) {
 		for (Bouton bouton : Bouton.boutons) {
 			if (!bouton.isLocked()) {
@@ -64,7 +59,5 @@ public class Mouse extends Observable implements MouseListener, MouseMotionListe
 			}
 		}
 	}
-
-	
 
 }

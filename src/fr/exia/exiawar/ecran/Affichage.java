@@ -8,14 +8,17 @@ import java.util.Observer;
 
 import javax.swing.JPanel;
 
+import fr.exia.exiawar.ecran.affichages.Jeux;
+import fr.exia.exiawar.ecran.affichages.Menu;
+import fr.exia.exiawar.ecran.affichages.Options;
 import fr.exia.exiawar.enums.EnumAffichage;
 
-public class Affichage extends JPanel implements Observer{
+public class Affichage extends JPanel implements Observer {
 
 	private static final long serialVersionUID = -994965329985547793L;
 
 	private EnumAffichage affichage;
-	
+
 	public static final String POLICE = "Century Gothic";
 
 	public Affichage() {
@@ -27,11 +30,15 @@ public class Affichage extends JPanel implements Observer{
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 		if (this.affichage == EnumAffichage.Menu) {
-			
+			Menu menu = new Menu();
+			menu.dessiner(g2d);
+
 		} else if (this.affichage == EnumAffichage.Jeux) {
-			
+			new Jeux();
+
 		} else if (this.affichage == EnumAffichage.Options) {
-			
+			new Options();
+
 		}
 	}
 

@@ -1,8 +1,18 @@
 package fr.exia.exiawar.ecran.affichages;
 
-public class Options {
+import java.awt.Graphics2D;
+
+import fr.exia.exiawar.Interface.IDessiner;
+
+public class Options implements IDessiner{
 
 	public Options() {
+		
+	}
+
+	@Override
+	public void dessiner(Graphics2D g2d) {
+		// TODO Auto-generated method stub
 		
 	}
 
