@@ -19,20 +19,25 @@ public class Affichage extends JPanel implements Observer {
 
 	private EnumAffichage affichage;
 
+	private Menu menu = new Menu();
+
+	private int width;
+	private int height;
+
 	public static final String POLICE = "Century Gothic";
 
-	public Affichage() {
+	public Affichage(int width, int height) {
 		this.affichage = EnumAffichage.Menu;
+		this.width = width;
+		this.height = height;
 	}
 
 	public void paintComponent(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
+		clear(g2d);
 		if (this.affichage == EnumAffichage.Menu) {
-			Menu menu = new Menu();
 			menu.dessiner(g2d);
-
 		} else if (this.affichage == EnumAffichage.Jeux) {
 			new Jeux();
 
@@ -40,6 +45,10 @@ public class Affichage extends JPanel implements Observer {
 			new Options();
 
 		}
+	}
+
+	public void clear(Graphics2D g2d) {
+		g2d.clearRect(0, 0, width, height);
 	}
 
 	public void update(Observable arg0, Object arg1) {

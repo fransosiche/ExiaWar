@@ -8,7 +8,6 @@ public class Start extends Bouton {
 
 	public Start(int x, int y, int width, int height, Affichage affichage) {
 		super(x, y, width, height, "Start", affichage);
-		// TODO Auto-generated constructor stub
 	}
 
 

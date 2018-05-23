@@ -15,7 +15,6 @@ public class Menu implements IDessiner {
 
 	@Override
 	public void dessiner(Graphics2D g2d) {
-
 		start.dessiner(g2d);
 	}
 
