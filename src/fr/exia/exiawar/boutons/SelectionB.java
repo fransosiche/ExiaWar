@@ -20,7 +20,19 @@ public class SelectionB extends Bouton {
 	public void action() {
 		if (affichage.getAffichage() == EnumAffichage.Jeux
 				&& affichage.getJeux().getAffichage() == EnumJeux.SelectionPersonnage) {
-			affichage.getJeux().setAffichage(EnumJeux.Partie);
+			if (affichage.getJeux().getSelectionP().getPersonnageJ1() == null) {
+				affichage.getJeux().getSelectionP()
+						.setPersonnageJ1(affichage.getJeux().getSelectionP().getPersonnageSelected());
+				affichage.getJeux().getSelectionP().setPersonnageSelected(null);
+				affichage.getJeux().getSelectionP().getSelect().setLocked(true);
+			} else if (affichage.getJeux().getSelectionP().getPersonnageJ2() == null) {
+				affichage.getJeux().getSelectionP()
+						.setPersonnageJ2(affichage.getJeux().getSelectionP().getPersonnageSelected());
+				affichage.getJeux().getSelectionP().getSelect().setLocked(true);
+				affichage.getJeux().setAffichage(EnumJeux.Partie);
+			} else {
+				affichage.getJeux().setAffichage(EnumJeux.Partie);
+			}
 		}
 	}
 
@@ -42,7 +54,7 @@ public class SelectionB extends Bouton {
 		} else {
 			g2d.setColor(Color.BLACK);
 			g2d.draw(getRect());
-			
+
 			int widthCadenas = 19;
 			int heightCadenas = 25;
 

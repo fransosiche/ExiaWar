@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 
 import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.interfaces.IDessiner;
+import fr.exia.exiawar.personnages.Personnage;
 
 public class Partie implements IDessiner {
 

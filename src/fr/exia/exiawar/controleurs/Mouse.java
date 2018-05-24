@@ -35,6 +35,7 @@ public class Mouse extends Observable implements MouseListener, MouseMotionListe
 				bouton.action();
 				this.setChanged();
 				this.notifyObservers();
+				break;
 			}
 		}
 	}
