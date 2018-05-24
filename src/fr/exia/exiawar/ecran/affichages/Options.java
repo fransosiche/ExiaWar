@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 
 import fr.exia.exiawar.Interface.IDessiner;
 import fr.exia.exiawar.boutons.MenuB;
-import fr.exia.exiawar.boutons.StartB;
 import fr.exia.exiawar.ecran.Affichage;
 
 public class Options implements IDessiner {
@@ -17,7 +16,6 @@ public class Options implements IDessiner {
 
 	public void dessiner(Graphics2D g2d) {
 		menu.dessiner(g2d);
-		
 	}
 
 }
