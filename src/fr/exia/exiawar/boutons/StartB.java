@@ -44,7 +44,7 @@ public class StartB extends Bouton {
 			int widthCadenas = 19;
 			int heightCadenas = 25;
 
-			g2d.drawImage(new ImageIcon("cadenas.png").getImage(), x - widthCadenas - 5,
+			g2d.drawImage(new ImageIcon("img\\boutons\\cadenas.png").getImage(), x - widthCadenas - 5,
 					y + height / 2 - heightCadenas / 2, widthCadenas, heightCadenas, null);
 		}
 

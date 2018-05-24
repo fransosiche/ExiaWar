@@ -13,11 +13,13 @@ public class Menu implements IDessiner {
 	private StartB start;
 	private ExitB exit;
 	private OptionsB option;
-	
-	public Menu(int width, int height, Affichage affichage) {
-		start = new StartB(width / 2 - 50, (int) (height / 1.5) - 100, 100, 30, affichage);
-		option = new OptionsB(width / 2 - 50, (int) (height / 1.5) - 50, 100, 30, affichage);
-		exit = new ExitB(width / 2 - 50, (int) (height / 1.5), 100, 30, affichage);
+
+	public Menu(Affichage affichage) {
+		start = new StartB(affichage.getWidth() / 2 - 50, (int) (affichage.getHeight() / 1.5) - 100, 100, 30,
+				affichage);
+		option = new OptionsB(affichage.getWidth() / 2 - 50, (int) (affichage.getHeight() / 1.5) - 50, 100, 30,
+				affichage);
+		exit = new ExitB(affichage.getWidth() / 2 - 50, (int) (affichage.getHeight() / 1.5), 100, 30, affichage);
 	}
 
 	public void dessiner(Graphics2D g2d) {

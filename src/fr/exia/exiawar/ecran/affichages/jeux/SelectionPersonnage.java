@@ -1,27 +1,42 @@
 package fr.exia.exiawar.ecran.affichages.jeux;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 
 import fr.exia.exiawar.Interface.IDessiner;
 import fr.exia.exiawar.boutons.BoutonPersonnage;
 import fr.exia.exiawar.boutons.MenuB;
+import fr.exia.exiawar.boutons.SelectPersonnageB;
 import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.personnage.Ahmed;
 import fr.exia.exiawar.personnage.AnneLaure;
 import fr.exia.exiawar.personnage.Jeremi;
+import fr.exia.exiawar.personnage.Personnage;
 
 public class SelectionPersonnage implements IDessiner {
 	private MenuB menu;
+
+	private Personnage personnageSelected;
+
 	private BoutonPersonnage ahmed;
 	private BoutonPersonnage annelaure;
 	private BoutonPersonnage jeremi;
 
-	public SelectionPersonnage(int width, int height, Affichage affichage) {
-		menu = new MenuB(width - 115, 20, 100, 30, affichage);
-		ahmed = new BoutonPersonnage((int) (width / 2.1 + 200), (int) (height / 3.5), 100, 80, new Ahmed(), affichage);
-		annelaure = new BoutonPersonnage((int) (width / 2.1 ), (int) (height / 3.5), 100, 80, new AnneLaure(), affichage);
-		jeremi = new BoutonPersonnage((int) (width / 2.1  - 200), (int) (height / 3.5), 100, 80, new Jeremi(), affichage);
+	private SelectPersonnageB select;
 
+	public SelectionPersonnage(Affichage affichage) {
+		menu = new MenuB(affichage.getWidth() - 115, 20, 100, 30, affichage);
+		ahmed = new BoutonPersonnage((int) (affichage.getWidth() / 2.1 + 200), (int) (affichage.getHeight() / 3.5), 100,
+				80, new Ahmed(), affichage);
+		annelaure = new BoutonPersonnage((int) (affichage.getWidth() / 2.1), (int) (affichage.getHeight() / 3.5), 100,
+				80, new AnneLaure(), affichage);
+		jeremi = new BoutonPersonnage((int) (affichage.getWidth() / 2.1 - 200), (int) (affichage.getHeight() / 3.5),
+				100, 80, new Jeremi(), affichage);
+
+		select = new SelectPersonnageB((int) (affichage.getWidth() / 2 - 150),
+				(int) (affichage.getHeight() / 3.5) + 400, 300, 50, affichage);
+
+		personnageSelected = null;
 	}
 
 	public void dessiner(Graphics2D g2d) {
@@ -29,6 +44,33 @@ public class SelectionPersonnage implements IDessiner {
 		ahmed.dessiner(g2d);
 		annelaure.dessiner(g2d);
 		jeremi.dessiner(g2d);
+
+		select.dessiner(g2d);
+
+		dessinerPersonnageSelectionne(g2d);
+	}
+
+	public void dessinerPersonnageSelectionne(Graphics2D g2d) {
+		g2d.setColor(Color.BLACK);
+		g2d.drawRect(20, 550, 100, 100);
+		if (personnageSelected != null)
+			g2d.drawImage(personnageSelected.getLogo(), 20, 550, 100, 100, null);
+	}
+
+	public Personnage getPersonnageSelected() {
+		return personnageSelected;
+	}
+
+	public void setPersonnageSelected(Personnage personnageSelected) {
+		this.personnageSelected = personnageSelected;
+	}
+
+	public SelectPersonnageB getSelect() {
+		return select;
+	}
+
+	public void setSelect(SelectPersonnageB select) {
+		this.select = select;
 	}
 
 }

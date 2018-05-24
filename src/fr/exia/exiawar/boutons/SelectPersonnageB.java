@@ -11,20 +11,17 @@ import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.enums.EnumAffichage;
 import fr.exia.exiawar.enums.EnumJeux;
 
-public class MenuB extends Bouton {
+public class SelectPersonnageB extends Bouton {
 
-	public MenuB(int x, int y, int width, int height, Affichage affichage) {
-		super(x, y, width, height, "Menu", affichage);
+	public SelectPersonnageB(int x, int y, int width, int height, Affichage affichage) {
+		super(x, y, width, height, "Select", true, affichage);
 	}
 
 	public void action() {
-		if (affichage.getAffichage() == EnumAffichage.Options) {
-			affichage.setAffichage(EnumAffichage.Menu);
-		} else if (affichage.getAffichage() == EnumAffichage.Jeux
+		if (affichage.getAffichage() == EnumAffichage.Jeux
 				&& affichage.getJeux().getAffichage() == EnumJeux.SelectionPersonnage) {
-			affichage.setAffichage(EnumAffichage.Menu);
+			affichage.getJeux().setAffichage(EnumJeux.Partie);
 		}
-
 	}
 
 	public void action(Graphics2D g2d) {
@@ -45,7 +42,7 @@ public class MenuB extends Bouton {
 		} else {
 			g2d.setColor(Color.BLACK);
 			g2d.draw(getRect());
-
+			
 			int widthCadenas = 19;
 			int heightCadenas = 25;
 
