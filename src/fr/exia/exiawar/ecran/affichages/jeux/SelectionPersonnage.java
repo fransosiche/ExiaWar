@@ -50,49 +50,49 @@ public class SelectionPersonnage implements IDessiner {
 
 	public SelectionPersonnage(Affichage affichage) {
 		menu = new MenuB(affichage.getWidth() - 115, 20, 100, 30, affichage);
-		
-		ahmed = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 200), (int) (affichage.getHeight() / 3.5), 100,
-				80, new Ahmed(), affichage);
-		annelaure = new BoutonPersonnage((int) (affichage.getWidth() / 2), (int) (affichage.getHeight() / 3.5), 100,
-				80, new AnneLaure(), affichage);
-		jeremy = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 200), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Jeremy(), affichage);
-		amiel = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Amiel(), affichage);
-		remi = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Remi(), affichage);
-		louis = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Louis(), affichage);
-		benjamin = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Benjamin(), affichage);
-		francois = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Francois(), affichage);
-		kevkev = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new KevKev(), affichage);
-		erwan = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Erwan(), affichage);
-		mmouky = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Mmouky(), affichage);
-		pauline = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Pauline(), affichage);
-		gurvan = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Gurvan(), affichage);
-		julien = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Julien(), affichage);
-		gwenael = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 400), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Gwenael(), affichage);
-		
 
-		select = new SelectionB((int) (affichage.getWidth() / 2 - 150),
-				(int) (affichage.getHeight() / 3.5) + 400, 300, 50, affichage);
+		ahmed = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 250), (int) (affichage.getHeight() / 2 - 270),
+				100, 80, new Ahmed(), affichage);
+		annelaure = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 100),(int) (affichage.getHeight() / 2 - 270), 100, 80, new AnneLaure(), affichage);
+		jeremy = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 50), (int) (affichage.getHeight() / 2 - 270),
+				100, 80, new Jeremy(), affichage);
+		amiel = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 200), (int) (affichage.getHeight() / 2 - 270),
+				100, 80, new Amiel(), affichage);
+		remi = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 350), (int) (affichage.getHeight() / 2 - 270),
+				100, 80, new Remi(), affichage);
+
+		louis = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 250), (int) (affichage.getHeight() / 2 -140),
+				100, 80, new Louis(), affichage);
+		benjamin = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 100), (int) (affichage.getHeight() / 2 - 140),
+				100, 80, new Benjamin(), affichage);
+		francois = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 50), (int) (affichage.getHeight() / 2 - 140),
+				100, 80, new Francois(), affichage);
+		kevkev = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 200), (int) (affichage.getHeight() / 2 - 140),
+				100, 80, new KevKev(), affichage);
+		erwan = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 350), (int) (affichage.getHeight() / 2 - 140),
+				100, 80, new Erwan(), affichage);
+
+		mmouky = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 250), (int) (affichage.getHeight() / 2 -10),
+				100, 80, new Mmouky(), affichage);
+		pauline = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 100), (int) (affichage.getHeight() / 2 -10),
+				100, 80, new Pauline(), affichage);
+		gurvan = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 50), (int) (affichage.getHeight() / 2 -10),
+				100, 80, new Gurvan(), affichage);
+		julien = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 200), (int) (affichage.getHeight() / 2 -10),
+				100, 80, new Julien(), affichage);
+		gwenael = new BoutonPersonnage((int) (affichage.getWidth() / 2 - 350), (int) (affichage.getHeight() / 2 -10),
+				100, 80, new Gwenael(), affichage);
+
+		select = new SelectionB((int) (affichage.getWidth() / 2 - 150), (int) (affichage.getHeight() / 3.5) + 400, 300,
+				50, affichage);
 
 		personnageSelected = null;
 	}
 
 	public void dessiner(Graphics2D g2d) {
 		menu.dessiner(g2d);
-		
-		for(BoutonPersonnage persoB : BoutonPersonnage.liste_personnage){
+
+		for (BoutonPersonnage persoB : BoutonPersonnage.liste_personnage) {
 			persoB.dessiner(g2d);
 		}
 
