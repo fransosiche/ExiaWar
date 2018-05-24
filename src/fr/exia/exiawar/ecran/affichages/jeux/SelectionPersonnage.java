@@ -18,10 +18,9 @@ public class SelectionPersonnage implements IDessiner {
 
 	public SelectionPersonnage(int width, int height, Affichage affichage) {
 		menu = new MenuB(width - 115, 20, 100, 30, affichage);
-		ahmed = new BoutonPersonnage((int) (width / 3.5), (int) (height / 3.5), 100, 80, new Ahmed(), affichage);
-		annelaure = new BoutonPersonnage((int) (width / 2.5), (int) (height / 3.5), 100, 80, new AnneLaure(),
-				affichage);
-		jeremi = new BoutonPersonnage((int) (width / 1.5), (int) (height / 3.5), 100, 80, new Jeremi(), affichage);
+		ahmed = new BoutonPersonnage((int) (width / 2.1 + 200), (int) (height / 3.5), 100, 80, new Ahmed(), affichage);
+		annelaure = new BoutonPersonnage((int) (width / 2.1 ), (int) (height / 3.5), 100, 80, new AnneLaure(), affichage);
+		jeremi = new BoutonPersonnage((int) (width / 2.1  - 200), (int) (height / 3.5), 100, 80, new Jeremi(), affichage);
 
 	}
 

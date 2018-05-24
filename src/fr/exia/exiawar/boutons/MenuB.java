@@ -20,18 +20,17 @@ public class MenuB extends Bouton {
 	public void action() {
 		if (affichage.getAffichage() == EnumAffichage.Options) {
 			affichage.setAffichage(EnumAffichage.Menu);
-		}
-		else if(affichage.getAffichage()== EnumAffichage.Jeux && affichage.getJeux().getAffichage() == EnumJeux.SelectionPersonnage)
-		{
+		} else if (affichage.getAffichage() == EnumAffichage.Jeux
+				&& affichage.getJeux().getAffichage() == EnumJeux.SelectionPersonnage) {
 			affichage.setAffichage(EnumAffichage.Menu);
 		}
-		
-	}
-
-	public void action(Graphics2D g2d) { 
 
 	}
-	
+
+	public void action(Graphics2D g2d) {
+
+	}
+
 	public void dessiner(Graphics2D g2d) {
 		if (isLocked == false) {
 			if (isFocus == false) {
