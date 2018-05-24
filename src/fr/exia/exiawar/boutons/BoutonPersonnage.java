@@ -3,6 +3,7 @@ package fr.exia.exiawar.boutons;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
@@ -16,11 +17,14 @@ public class BoutonPersonnage extends Bouton {
 	private final static int size = 100;
 	private Personnage personnage;
 	private Affichage affichage;
-
+	
+	public static ArrayList<BoutonPersonnage> liste_personnage = new ArrayList<BoutonPersonnage>();
+	
 	public BoutonPersonnage(int x, int y, int width, int height, Personnage personnage, Affichage affichage) {
 		super(x, y, size, size, personnage.getNom(), affichage);
 		this.personnage = personnage;
 		this.affichage = affichage;
+		liste_personnage.add(this);
 	}
 
 	public void dessiner(Graphics2D g2d) {
