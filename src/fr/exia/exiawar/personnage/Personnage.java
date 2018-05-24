@@ -1,12 +1,17 @@
 package fr.exia.exiawar.personnage;
 
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
 public abstract class Personnage {
 
 	protected String nom;
+	protected Image logo;
 
-	public Personnage(String nom) {
+	public Personnage(String nom, String logoPath) {
 		this.nom = nom;
-
+		this.logo = new ImageIcon(logoPath).getImage();
 	}
 
 	public String getNom() {
@@ -15,6 +20,14 @@ public abstract class Personnage {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+
+	public Image getLogo() {
+		return logo;
+	}
+
+	public void setLogo(Image logo) {
+		this.logo = logo;
 	}
 
 }

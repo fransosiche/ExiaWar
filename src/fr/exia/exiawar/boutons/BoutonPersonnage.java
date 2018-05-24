@@ -8,15 +8,17 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 import fr.exia.exiawar.ecran.Affichage;
-import fr.exia.exiawar.personnage.Amhed;
+import fr.exia.exiawar.personnage.Ahmed;
 import fr.exia.exiawar.personnage.Personnage;
 
 public class BoutonPersonnage extends Bouton {
 	
 	private final static int size = 100;
+	private Personnage personnage;
 	
 	public BoutonPersonnage(int x, int y, int width, int height, Personnage personnage, Affichage affichage) {
 		super(x, y, size, size,personnage.getNom() , affichage );
+		this.personnage = personnage;
 	}
 
 	public void dessiner(Graphics2D g2d) {
@@ -42,13 +44,7 @@ public class BoutonPersonnage extends Bouton {
 					y + height / 2 - heightCadenas / 2, widthCadenas, heightCadenas, null);
 		}
 
-		g2d.setFont(new Font(Affichage.POLICE, Font.BOLD, 20));
-		String UPtext = text.toUpperCase();
-
-		int widthTxt = (int) g2d.getFontMetrics().getStringBounds(UPtext, g2d).getWidth();
-		int heightTxt = (int) g2d.getFontMetrics().getStringBounds(UPtext, g2d).getHeight();
-
-		g2d.drawString(UPtext, x + width / 2 - widthTxt / 2, y + height / 2 + heightTxt / 3);
+		g2d.drawImage(personnage.getLogo(), this.x, this.y, size, size, null);
 
 	}
 
