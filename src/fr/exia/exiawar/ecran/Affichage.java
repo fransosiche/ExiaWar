@@ -59,4 +59,52 @@ public class Affichage extends JPanel implements Observer {
 		this.repaint();
 	}
 
+	public EnumAffichage getAffichage() {
+		return affichage;
+	}
+
+	public void setAffichage(EnumAffichage affichage) {
+		this.affichage = affichage;
+	}
+
+	public Menu getMenu() {
+		return menu;
+	}
+
+	public void setMenu(Menu menu) {
+		this.menu = menu;
+	}
+
+	public Jeux getJeux() {
+		return jeux;
+	}
+
+	public void setJeux(Jeux jeux) {
+		this.jeux = jeux;
+	}
+
+	public Options getOptions() {
+		return options;
+	}
+
+	public void setOptions(Options options) {
+		this.options = options;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
 }
