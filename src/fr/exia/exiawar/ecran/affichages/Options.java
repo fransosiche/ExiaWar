@@ -13,6 +13,7 @@ public class Options implements IDessiner {
 
 	public void dessiner(Graphics2D g2d) {
 		// TODO Auto-generated method stub
+		
 
 	}
 
