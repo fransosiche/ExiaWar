@@ -3,6 +3,7 @@ package fr.exia.exiawar.boutons;
 import java.awt.Graphics2D;
 
 import fr.exia.exiawar.ecran.Affichage;
+import fr.exia.exiawar.enums.EnumAffichage;
 
 public class OptionsB extends Bouton{
 
@@ -12,7 +13,10 @@ public class OptionsB extends Bouton{
 	}
 
 	public void action() {
-		// TODO Auto-generated method stub
+		if(affichage.getAffichage() == EnumAffichage.Menu)
+		{
+			affichage.setAffichage(EnumAffichage.Options);
+		}
 		
 	}
 
