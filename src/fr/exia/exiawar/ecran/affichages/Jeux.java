@@ -17,7 +17,7 @@ public class Jeux implements IDessiner {
 
 	public Jeux(int width, int height, Affichage affichage) {
 		this.affichage = EnumJeux.SelectionPersonnage;
-		this.selectionP = new SelectionPersonnage(affichage);
+		this.selectionP = new SelectionPersonnage(width, height, affichage);
 		this.partie = new Partie(affichage);
 	}
 
