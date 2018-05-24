@@ -26,7 +26,9 @@ import fr.exia.exiawar.personnages.Personnage;
 import fr.exia.exiawar.personnages.Remi;
 
 public class SelectionPersonnage implements IDessiner {
+
 	private MenuB menu;
+	private Affichage affichage;
 
 	private Personnage personnageSelected;
 
@@ -52,7 +54,9 @@ public class SelectionPersonnage implements IDessiner {
 	private SelectionB select;
 
 	public SelectionPersonnage(Affichage affichage) {
+
 		menu = new MenuB(affichage.getWidth() - 115, 20, 100, 30, affichage);
+		this.affichage = affichage;
 
 		ahmed = new BoutonPersonnage((int) (affichage.getWidth() / 2 + 250), (int) (affichage.getHeight() / 2 - 270),
 				100, 80, new Ahmed(), affichage);
@@ -105,13 +109,38 @@ public class SelectionPersonnage implements IDessiner {
 		select.dessiner(g2d);
 
 		dessinerPersonnageSelectionne(g2d);
+		dessinerPersonnageJ1(g2d);
+		dessinerPersonnageJ2(g2d);
 	}
 
 	public void dessinerPersonnageSelectionne(Graphics2D g2d) {
 		g2d.setColor(Color.BLACK);
-		g2d.drawRect(20, 550, 100, 100);
+		g2d.drawRect(this.affichage.getWidth() / 2 - 50, this.affichage.getHeight() - 230, 100, 100);
 		if (personnageSelected != null)
-			g2d.drawImage(personnageSelected.getLogo(), 20, 550, 100, 100, null);
+			g2d.drawImage(personnageSelected.getLogo(), this.affichage.getWidth() / 2 - 50,
+					this.affichage.getHeight() - 230, 100, 100, null);
+	}
+
+	public void dessinerPersonnageJ1(Graphics2D g2d) {
+		g2d.setColor(Color.BLACK);
+		g2d.drawRect(50, this.affichage.getHeight() - 160, 100, 100);
+		if (personnageJ1 != null)
+			g2d.drawImage(personnageJ1.getLogo(), 50, this.affichage.getHeight() - 160, 100, 100, null);
+	}
+
+	public void dessinerPersonnageJ2(Graphics2D g2d) {
+		g2d.setColor(Color.BLACK);
+		g2d.drawRect(this.affichage.getWidth() - 160, this.affichage.getHeight() - 160, 100, 100);
+		if (personnageJ2 != null)
+			g2d.drawImage(personnageJ2.getLogo(), this.affichage.getWidth() - 160, this.affichage.getHeight() - 160,
+					100, 100, null);
+	}
+
+	public void resetSelection() {
+		this.select.setLocked(true);
+		this.setPersonnageJ1(null);
+		this.setPersonnageJ2(null);
+		this.setPersonnageSelected(null);
 	}
 
 	public Personnage getPersonnageSelected() {

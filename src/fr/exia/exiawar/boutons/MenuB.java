@@ -22,6 +22,7 @@ public class MenuB extends Bouton {
 			affichage.setAffichage(EnumAffichage.Menu);
 		} else if (affichage.getAffichage() == EnumAffichage.Jeux
 				&& affichage.getJeux().getAffichage() == EnumJeux.SelectionPersonnage) {
+			affichage.getJeux().getSelectionP().resetSelection();
 			affichage.setAffichage(EnumAffichage.Menu);
 		}
 
