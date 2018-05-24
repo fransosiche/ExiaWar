@@ -33,9 +33,9 @@ public class Affichage extends JPanel implements Observer {
 		this.width = width;
 		this.height = height;
 
-		menu = new Menu(width, height);
-		jeux = new Jeux(width, height);
-		options = new Options(width, height);
+		menu = new Menu(width, height,this);
+		jeux = new Jeux(width, height,this);
+		options = new Options(width, height,this);
 	}
 
 	public void paintComponent(Graphics g) {
