@@ -17,6 +17,7 @@ public class Options implements IDessiner {
 
 	public void dessiner(Graphics2D g2d) {
 		menu.dessiner(g2d);
+		
 	}
 
 }
