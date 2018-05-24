@@ -12,7 +12,7 @@ public class SelectionPersonnage implements IDessiner{
 		
 	}
 
-	@Override
+	
 	public void dessiner(Graphics2D g2d) {
 		g2d.setColor(Color.BLACK);
 		g2d.fillRect(50, 50, 50, 50);
