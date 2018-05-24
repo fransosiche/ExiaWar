@@ -10,19 +10,20 @@ import javax.swing.ImageIcon;
 import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.enums.EnumAffichage;
 
-public class Start extends Bouton {
+public class ExitB extends Bouton {
 
-	public Start(int x, int y, int width, int height, Affichage affichage) {
-		super(x, y, width, height, "Start", affichage);
+	public ExitB(int x, int y, int width, int height, Affichage affichage) {
+		super(x, y, width, height, "Exit", affichage);
 	}
 
 	public void action() {
 		if (affichage.getAffichage() == EnumAffichage.Menu) {
-			affichage.setAffichage(EnumAffichage.Jeux);
+			System.exit(0);
 		}
 	}
 
 	public void action(Graphics2D g2d) {
+		// TODO Auto-generated method stub
 
 	}
 	
