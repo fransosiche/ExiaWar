@@ -17,8 +17,6 @@ public class BoutonPersonnage extends Bouton {
 	
 	public BoutonPersonnage(int x, int y, int width, int height, Personnage personnage, Affichage affichage) {
 		super(x, y, size, size,personnage.getNom() , affichage );
-
-		// TODO Auto-generated constructor stub
 	}
 
 	public void dessiner(Graphics2D g2d) {
