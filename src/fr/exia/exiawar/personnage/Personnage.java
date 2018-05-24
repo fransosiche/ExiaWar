@@ -1,6 +1,6 @@
 package fr.exia.exiawar.personnage;
 
-public class Personnage {
+public abstract class Personnage {
 
 	protected String nom;
 
