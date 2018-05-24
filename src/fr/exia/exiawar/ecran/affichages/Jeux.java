@@ -10,7 +10,7 @@ public class Jeux implements IDessiner{
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
+
 	public void dessiner(Graphics2D g2d) {
 		// TODO Auto-generated method stub
 		

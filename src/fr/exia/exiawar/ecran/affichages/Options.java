@@ -10,7 +10,7 @@ public class Options implements IDessiner {
 
 	}
 
-	@Override
+	
 	public void dessiner(Graphics2D g2d) {
 		// TODO Auto-generated method stub
 
