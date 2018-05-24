@@ -12,9 +12,11 @@ import fr.exia.exiawar.personnage.Amhed;
 import fr.exia.exiawar.personnage.Personnage;
 
 public class BoutonPersonnage extends Bouton {
-
+	
+	private final static int size = 100;
+	
 	public BoutonPersonnage(int x, int y, int width, int height, Personnage personnage, Affichage affichage) {
-		super(x, y, width, height,personnage.getNom() , affichage );
+		super(x, y, size, size,personnage.getNom() , affichage );
 
 		// TODO Auto-generated constructor stub
 	}
