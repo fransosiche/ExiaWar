@@ -9,7 +9,7 @@ public class Menu implements IDessiner {
 
 	private Start start;
 
-	public Menu() {
+	public Menu(int width, int height) {
 		start = new Start(200, 200, 100, 30, null);
 	}
 

@@ -6,7 +6,7 @@ import fr.exia.exiawar.Interface.IDessiner;
 
 public class Jeux implements IDessiner{
 
-	public Jeux() {
+	public Jeux(int width, int height) {
 		// TODO Auto-generated constructor stub
 	}
 

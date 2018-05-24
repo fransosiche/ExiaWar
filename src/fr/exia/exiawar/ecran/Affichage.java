@@ -19,7 +19,9 @@ public class Affichage extends JPanel implements Observer {
 
 	private EnumAffichage affichage;
 
-	private Menu menu = new Menu();
+	private Menu menu;
+	private Jeux jeux;
+	private Options options;
 
 	private int width;
 	private int height;
@@ -30,6 +32,10 @@ public class Affichage extends JPanel implements Observer {
 		this.affichage = EnumAffichage.Menu;
 		this.width = width;
 		this.height = height;
+
+		menu = new Menu(width, height);
+		jeux = new Jeux(width, height);
+		options = new Options(width, height);
 	}
 
 	public void paintComponent(Graphics g) {
@@ -39,11 +45,9 @@ public class Affichage extends JPanel implements Observer {
 		if (this.affichage == EnumAffichage.Menu) {
 			menu.dessiner(g2d);
 		} else if (this.affichage == EnumAffichage.Jeux) {
-			new Jeux();
-
+			jeux.dessiner(g2d);
 		} else if (this.affichage == EnumAffichage.Options) {
-			new Options();
-
+			options.dessiner(g2d);
 		}
 	}
 
