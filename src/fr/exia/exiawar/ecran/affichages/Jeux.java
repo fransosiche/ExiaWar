@@ -2,11 +2,11 @@ package fr.exia.exiawar.ecran.affichages;
 
 import java.awt.Graphics2D;
 
-import fr.exia.exiawar.Interface.IDessiner;
 import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.ecran.affichages.jeux.Partie;
 import fr.exia.exiawar.ecran.affichages.jeux.SelectionPersonnage;
 import fr.exia.exiawar.enums.EnumJeux;
+import fr.exia.exiawar.interfaces.IDessiner;
 
 public class Jeux implements IDessiner {
 

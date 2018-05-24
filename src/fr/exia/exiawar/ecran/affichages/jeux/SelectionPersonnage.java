@@ -3,15 +3,15 @@ package fr.exia.exiawar.ecran.affichages.jeux;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-import fr.exia.exiawar.Interface.IDessiner;
 import fr.exia.exiawar.boutons.BoutonPersonnage;
 import fr.exia.exiawar.boutons.MenuB;
-import fr.exia.exiawar.boutons.SelectPersonnageB;
+import fr.exia.exiawar.boutons.SelectionB;
 import fr.exia.exiawar.ecran.Affichage;
-import fr.exia.exiawar.personnage.Ahmed;
-import fr.exia.exiawar.personnage.AnneLaure;
-import fr.exia.exiawar.personnage.Jeremi;
-import fr.exia.exiawar.personnage.Personnage;
+import fr.exia.exiawar.interfaces.IDessiner;
+import fr.exia.exiawar.personnages.Ahmed;
+import fr.exia.exiawar.personnages.AnneLaure;
+import fr.exia.exiawar.personnages.Jeremy;
+import fr.exia.exiawar.personnages.Personnage;
 
 public class SelectionPersonnage implements IDessiner {
 	private MenuB menu;
@@ -22,7 +22,7 @@ public class SelectionPersonnage implements IDessiner {
 	private BoutonPersonnage annelaure;
 	private BoutonPersonnage jeremi;
 
-	private SelectPersonnageB select;
+	private SelectionB select;
 
 	public SelectionPersonnage(Affichage affichage) {
 		menu = new MenuB(affichage.getWidth() - 115, 20, 100, 30, affichage);
@@ -31,9 +31,9 @@ public class SelectionPersonnage implements IDessiner {
 		annelaure = new BoutonPersonnage((int) (affichage.getWidth() / 2.1), (int) (affichage.getHeight() / 3.5), 100,
 				80, new AnneLaure(), affichage);
 		jeremi = new BoutonPersonnage((int) (affichage.getWidth() / 2.1 - 200), (int) (affichage.getHeight() / 3.5),
-				100, 80, new Jeremi(), affichage);
+				100, 80, new Jeremy(), affichage);
 
-		select = new SelectPersonnageB((int) (affichage.getWidth() / 2 - 150),
+		select = new SelectionB((int) (affichage.getWidth() / 2 - 150),
 				(int) (affichage.getHeight() / 3.5) + 400, 300, 50, affichage);
 
 		personnageSelected = null;
@@ -65,11 +65,11 @@ public class SelectionPersonnage implements IDessiner {
 		this.personnageSelected = personnageSelected;
 	}
 
-	public SelectPersonnageB getSelect() {
+	public SelectionB getSelect() {
 		return select;
 	}
 
-	public void setSelect(SelectPersonnageB select) {
+	public void setSelect(SelectionB select) {
 		this.select = select;
 	}
 

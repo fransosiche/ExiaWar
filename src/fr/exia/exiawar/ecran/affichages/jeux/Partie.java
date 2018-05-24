@@ -2,8 +2,8 @@ package fr.exia.exiawar.ecran.affichages.jeux;
 
 import java.awt.Graphics2D;
 
-import fr.exia.exiawar.Interface.IDessiner;
 import fr.exia.exiawar.ecran.Affichage;
+import fr.exia.exiawar.interfaces.IDessiner;
 
 public class Partie implements IDessiner {
 

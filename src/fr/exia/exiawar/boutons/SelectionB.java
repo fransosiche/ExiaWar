@@ -11,9 +11,9 @@ import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.enums.EnumAffichage;
 import fr.exia.exiawar.enums.EnumJeux;
 
-public class SelectPersonnageB extends Bouton {
+public class SelectionB extends Bouton {
 
-	public SelectPersonnageB(int x, int y, int width, int height, Affichage affichage) {
+	public SelectionB(int x, int y, int width, int height, Affichage affichage) {
 		super(x, y, width, height, "Select", true, affichage);
 	}
 

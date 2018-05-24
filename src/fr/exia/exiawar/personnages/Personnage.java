@@ -1,4 +1,4 @@
-package fr.exia.exiawar.personnage;
+package fr.exia.exiawar.personnages;
 
 import java.awt.Image;
 

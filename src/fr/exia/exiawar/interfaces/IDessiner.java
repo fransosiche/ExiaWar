@@ -1,4 +1,4 @@
-package fr.exia.exiawar.Interface;
+package fr.exia.exiawar.interfaces;
 
 import java.awt.Graphics2D;
 

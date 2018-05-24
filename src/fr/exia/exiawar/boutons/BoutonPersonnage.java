@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.enums.EnumAffichage;
 import fr.exia.exiawar.enums.EnumJeux;
-import fr.exia.exiawar.personnage.Personnage;
+import fr.exia.exiawar.personnages.Personnage;
 
 public class BoutonPersonnage extends Bouton {
 

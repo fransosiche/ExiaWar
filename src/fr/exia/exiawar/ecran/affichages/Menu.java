@@ -2,11 +2,11 @@ package fr.exia.exiawar.ecran.affichages;
 
 import java.awt.Graphics2D;
 
-import fr.exia.exiawar.Interface.IDessiner;
 import fr.exia.exiawar.boutons.ExitB;
 import fr.exia.exiawar.boutons.OptionsB;
 import fr.exia.exiawar.boutons.StartB;
 import fr.exia.exiawar.ecran.Affichage;
+import fr.exia.exiawar.interfaces.IDessiner;
 
 public class Menu implements IDessiner {
 

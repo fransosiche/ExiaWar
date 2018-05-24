@@ -1,4 +1,4 @@
-package fr.exia.exiawar.personnage;
+package fr.exia.exiawar.personnages;
 
 public class Ahmed extends Personnage {
 

@@ -3,9 +3,9 @@ package fr.exia.exiawar.boutons;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 
-import fr.exia.exiawar.Interface.IBoutonAction;
-import fr.exia.exiawar.Interface.IDessiner;
 import fr.exia.exiawar.ecran.Affichage;
+import fr.exia.exiawar.interfaces.IBoutonAction;
+import fr.exia.exiawar.interfaces.IDessiner;
 
 public abstract class Bouton implements IDessiner, IBoutonAction {
 
