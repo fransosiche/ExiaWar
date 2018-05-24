@@ -11,14 +11,14 @@ public class Start extends Bouton {
 		super(x, y, width, height, "Start", affichage);
 	}
 
-
 	public void action() {
-		affichage.setAffichage(EnumAffichage.Jeux);
+		if (affichage.getAffichage() == EnumAffichage.Menu) {
+			affichage.setAffichage(EnumAffichage.Jeux);
+		}
 	}
 
-
 	public void action(Graphics2D g2d) {
-		
+
 	}
 
 }
