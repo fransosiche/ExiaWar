@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 
 import fr.exia.exiawar.ecran.Affichage;
 import fr.exia.exiawar.enums.EnumAffichage;
+import fr.exia.exiawar.enums.EnumJeux;
 
 public class MenuB extends Bouton {
 
@@ -20,9 +21,14 @@ public class MenuB extends Bouton {
 		if (affichage.getAffichage() == EnumAffichage.Options) {
 			affichage.setAffichage(EnumAffichage.Menu);
 		}
+		else if(affichage.getAffichage()== EnumAffichage.Jeux && affichage.getJeux().getAffichage() == EnumJeux.SelectionPersonnage)
+		{
+			affichage.setAffichage(EnumAffichage.Menu);
+		}
+		
 	}
 
-	public void action(Graphics2D g2d) {
+	public void action(Graphics2D g2d) { 
 
 	}
 	
